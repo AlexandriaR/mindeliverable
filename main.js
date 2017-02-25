@@ -261,7 +261,7 @@ Princess.prototype.draw = function () {
 
 Princess.prototype.update = function (gameEngine) {
 	if(isDead === false ){
-		if (this.bg.x <= -3200 && this.x >= 700 && this.key) {
+		if (this.bg.x <= -3200 && this.x >= 700 && this.key && !this.game.win) {
 		    this.game.gameOver = true;
                     this.game.win = true;
                     this.game.addEntity(new endscreen(this.game, [AM.getAsset("./peachdance.png")], 22));
